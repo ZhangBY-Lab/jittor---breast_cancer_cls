@@ -2,7 +2,7 @@
 
 # Jittor 超声肿瘤乳腺癌Bi-Rads分级 
 
-![主要结果](https://s3.bmp.ovh/imgs/2022/04/19/440f015864695c92.png)
+![主要结果](https://github.com/ZhangBY-Lab/jittor-shijieheping-breast_cancer_cls/blob/main/models/demo.jpg)
 
 ｜展示方法的流程特点或者主要结果等
 
