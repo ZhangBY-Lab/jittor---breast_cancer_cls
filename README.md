@@ -61,12 +61,8 @@ bash scripts/test.sh
 ```
 
 ## 致谢
-| 对参考的论文、开源库予以致谢，可选
 
-此项目基于论文 *A Style-Based Generator Architecture for Generative Adversarial Networks* 实现，部分代码参考了 [jittor-gan](GitHub - Jittor/JGAN: JGAN model zoo supports 27 kinds of mainstream GAN models with high speed for )。
 
-## 注意事项
+此项目模型层面的代码参考了(https://github.com/Jittor-Image-Models/Jittor-Image-Models )。
 
-点击项目的“设置”，在Description一栏中添加项目描述，需要包含“jittor”字样。同时在Topics中需要添加jittor。
 
-![image-20220419164035639](https://s3.bmp.ovh/imgs/2022/04/19/6a3aa627eab5f159.png)
