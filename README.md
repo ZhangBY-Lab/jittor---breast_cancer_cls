@@ -4,60 +4,49 @@
 
 ![主要结果](https://github.com/ZhangBY-Lab/jittor-shijieheping-breast_cancer_cls/blob/main/models/demo.jpg)
 
-｜展示方法的流程特点或者主要结果等
 
 ## 简介
-| 简单介绍项目背景、项目特点
 
-本项目包含了第二届计图挑战赛计图 - 草图生成风景比赛的代码实现。本项目的特点是：采用了 XX 方法对 YY 处理，取得了 ZZ 的效果。
+本项目包含了第五届计图挑战赛计图 - 超声乳腺癌肿瘤Bi-Rads分级比赛的代码实现。本项目的核心任务是在jittor深度学习框架下开发乳腺癌超声图像Bi-rads分级模型，促进完成超声乳腺肿瘤的辅助诊断任务。
+此项目基于jimm，构建了双backbone+feature fusion+ gem pooling的分类模型，并使用改进的符合课程学习思想的labelsmooth以及增强的混合focal-bce loss等获得复赛第三名。
 
 ## 安装 
-| 介绍基本的硬件需求、运行环境、依赖安装方法
 
-本项目可在 2 张 2080 上运行，训练时间约为 6 小时。
+本项目可在 1 张 3090 上运行，单折训练时间约为 1 小时，总训练时间为 5 小时。
 
 #### 运行环境
-- ubuntu 20.04 LTS
-- python >= 3.7
-- jittor >= 1.3.0
+- ubuntu 22.04 LTS
+- python >= 3.10
+- jittor >= 1.3.9.14
 
 #### 安装依赖
 执行以下命令安装 python 依赖
 ```
+conda create -n jittor python=3.11.2
+
+conda activate jittor 
+
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124
+
 pip install -r requirements.txt
-```
 
-#### 预训练模型
-预训练模型模型下载地址为 https:abc.def.gh，下载后放入目录 `<root>/weights/` 下。
-
-## 数据预处理
-| 介绍数据预处理方法，可选
-
-将数据下载解压到 `<root>/data` 下，执行以下命令对数据预处理：
-```
-bash scripts/prepross.sh
+python -c "import torch; print(torch.cuda.is_available())"
 ```
 
 ## 训练
-｜ 介绍模型训练的方法
 
 单卡训练可运行以下命令：
 ```
-bash scripts/train.sh
+python _train.sh
 ```
 
-多卡训练可以运行以下命令：
-```
-bash scripts/train-multigpu.sh
-```
 
 ## 推理
-｜ 介绍模型推理、测试、或者评估的方法
 
 生成测试集上的结果可以运行以下命令：
 
 ```
-bash scripts/test.sh
+python _test.py
 ```
 
 ## 致谢
