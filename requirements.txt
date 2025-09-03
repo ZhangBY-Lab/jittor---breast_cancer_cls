@@ -1,0 +1,10 @@
+jittor==1.3.10.0
+pandas
+pillow
+albumentations
+opencv-python-headless==4.10.0.82
+numpy==1.25.0
+tqdm
+scikit-image==0.25.2
+scikit-learn==1.6.1
+torch
